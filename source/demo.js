@@ -8,7 +8,7 @@ import TabPanel from './template_tab'
 
 // CSS.
 import './demo.css'
-import './tabs.css'
+import './index.css'
 
 // Define class.
 class Demo extends React.Component {

@@ -1,3 +1,5 @@
+To use this component you must include `@t7/dist/index.css`
+
 This component can be used like so.
 
 ```js
