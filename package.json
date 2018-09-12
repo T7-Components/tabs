@@ -65,9 +65,8 @@
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.8"
   },
-  "dependencies": {
-    "@t7/utils": "0.0.1",
-    "jest-cli": "^23.6.0",
+  "peerDependencies": {
+    "@t7/utils": "^0.0.1",
     "prop-types": "^15.5.0",
     "react": "^16.5.0"
   }
