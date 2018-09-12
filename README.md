@@ -36,7 +36,7 @@ const handleClick (e, index, label) = {
 &nbsp;
 
 ### Note regarding the use of the _required_ CSS
-_*if your build process will not resolve the CSS in a module copy the file `@t7/tabs/dist/index.css` from the node_modules folder and include reference the copy with an HTML link *_  
+_*if your build process will not resolve the CSS in a module copy the file `@t7/tabs/dist/index.css` from the node_modules folder and reference the copy with an HTML link *_  
   
 ```html
 e.g.
