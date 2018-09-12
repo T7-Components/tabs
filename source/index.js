@@ -181,7 +181,7 @@ Tabs.propTypes = {
 
 // Defaults.
 Tabs.defaultProps = {
-  children: null, // fake.tabs(),
+  children: null,
   selected: 0
 }
 
