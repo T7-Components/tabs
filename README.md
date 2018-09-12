@@ -1,3 +1,7 @@
+# tabs
+
+Create tabs and related panel content from a single formatted structure
+
 ## Usage
 ```js
 import Tabs, { TabPanel } from '@t7/tabs'

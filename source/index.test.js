@@ -1,15 +1,25 @@
+/* global
+describe
+expect
+it
+jest
+*/
+
 // Dependencies.
 import React from 'react'
-import ReactDOM from 'react-dom'
+import T from 'react-dom/test-utils'
 
 // UI components.
 import Tabs from './'
-import TabPanel from './template_tab'
+import TabPanel from './template_panel'
 
-const handleClick = jest.fn()
-const tabsEl = (
-  <div className='PARENT'>
-    <Tabs selected={0} handleClick={handleClick}>
+jest.disableAutomock()
+
+// Describe `<Component/>` name.
+describe('Tabs', () => {
+  // Insert the component into DOM.
+  const el = T.renderIntoDocument(
+    <Tabs selected={0}>
       <TabPanel label='Tab 1'>
         <p>
           Tab content for "Tab 1"
@@ -20,78 +30,53 @@ const tabsEl = (
           Tab content for "Tab 2"
         </p>
       </TabPanel>
-      <TabPanel label='Tab 3'>
-        <p>
-          Tab content for "Tab 3"
-        </p>
-      </TabPanel>
     </Tabs>
-  </div>
-)
+  )
 
-// Helper.
-const renderWithProps = () => {
-  // Root.
-  const root =
-    document.getElementById('root')
+  // Get parent element.
+  const parent = T.findRenderedDOMComponentWithClass(el, 't7-tabs')
 
-  // Render.
-  ReactDOM.render(tabsEl, root)
+  // Get headers and panels.
+  const tabs = parent.querySelectorAll('.t7-tabs__item')
+  const panels = parent.querySelectorAll('.t7-tabs__panel')
 
-  // Get parent.
-  const parent =
-    document.querySelector('.PARENT')
+  // ===================
+  // Test for existence.
+  // ===================
 
-  // Expose object.
-  return {
-    tabsEl,
-    parent
-  }
-}
-
-// Describe `<Component/>` name.
-describe('Tabs', () => {
-  // ==============
-  // Clear the DOM.
-  // ==============
-
-  beforeEach(() => {
-    document.body.innerHTML = '<div id="root"></div>'
+  it('exists in the page', () => {
+    expect(T.isCompositeComponent(el)).toBe(true)
   })
 
-  // ===========================
-  // Test for valid set of tabs.
-  // ===========================
+  // ==============
+  // Test for tabs.
+  // ==============
 
-  it('creates a set of 3 tabs', () => {
-    const { parent } =
-      renderWithProps()
-
-    const tabs = parent.querySelectorAll('ul[role="tablist"]')
-    expect(tabs.length)
-      .toBe(1)
-
-    const tabList = tabs[0].querySelectorAll('li')
-
-    expect(tabList.length)
-      .toBe(3)
+  it('has child tabs', () => {
+    expect(tabs.length).toBe(2)
   })
 
-  // ============================
-  // Test for correct tab labels.
-  // ============================
+  // ================
+  // Test for panels.
+  // ================
 
-  it('creates tabs with text matching the model', () => {
-    const { parent } =
-      renderWithProps()
+  it('has child panels', () => {
+    expect(panels.length).toBe(2)
+  })
 
-    const tabs = parent.querySelectorAll('ul[role="tablist"]')
+  // ================
+  // Test for events.
+  // ================
 
-    const tabList = tabs[0].querySelectorAll('li')
+  it('responds to clicks', () => {
+    T.Simulate.click(tabs[1])
 
-    tabsEl.props.children.props.children.forEach((tab, i) => {
-      expect(tab.props.label)
-        .toEqual(tabList[i].textContent)
-    })
+    // First panel = off.
+    expect(tabs[0].getAttribute('aria-selected')).toBe('false')
+    expect(panels[0].getAttribute('aria-hidden')).toBe('true')
+
+    // Second panel = on.
+    expect(tabs[1].getAttribute('aria-selected')).toBe('true')
+    expect(panels[1].getAttribute('aria-hidden')).toBe('false')
   })
 })
