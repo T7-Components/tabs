@@ -10,6 +10,7 @@ import React from 'react'
 import T from 'react-dom/test-utils'
 
 // UI components.
+
 import Tabs from './'
 import TabPanel from './template_panel'
 
