@@ -1,4 +1,8 @@
-To use this component you must include `@t7/dist/index.css`
+To use the tabs you should import the components as
+```js
+import Tabs, { TabPanel } from '@t7/tabs'
+```
+You must also include `@t7/tabs/dist/index.css`
 
 This component can be used like so.
 

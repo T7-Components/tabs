@@ -39,6 +39,7 @@ import utils from '@t7/utils'
 
 // UI components.
 import Tab from './template_tab'
+import TabPanel from './template_panel'
 
 // Define class.
 class Tabs extends React.Component {
@@ -186,3 +187,4 @@ Tabs.defaultProps = {
 
 // Export.
 export default Tabs
+export { TabPanel }
