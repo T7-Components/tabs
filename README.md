@@ -7,6 +7,12 @@ import '@t7/tabs/dist/index.css'
 /* create a "handler" if your appliction requires additional processing when tabs are selected */
 const handleClick (e, index, label) = {
   <do something interesting>
+
+  /*
+    `e` is the event,
+    'index' is the index of the tab in the order declared,
+    `label` is the text itself.
+  */
 }
 
 .
