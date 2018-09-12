@@ -29,6 +29,15 @@
       "error",
       "expression"
     ],
+    "no-console": [
+      "error",
+      {
+        "allow": [
+          "warn",
+          "error"
+        ]
+      }
+    ],
     "no-var": "error",
     "prefer-arrow-callback": "error",
     "prefer-const": "error",

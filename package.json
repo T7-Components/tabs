@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "main": "dist/index.js",
   "description": "This component renders tabs and the related panels",
-  "author": "",
+  "author": "TandemSeven <github@tandemseven.com>",
   "license": "MIT",
+  "repository": "https://github.com/t7-components/tabs",
   "keywords": [
     "tab",
     "panel",
