@@ -9,7 +9,7 @@ import '@t7/tabs/dist/index.css'
 ```
 ```js
 /* create a "handler" if your appliction requires additional processing when tabs are selected */
-const handleClick (e, index, label) = {
+const handleClick = (e, index, label) => {
   <do something interesting>
 
   /*
