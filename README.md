@@ -1,6 +1,11 @@
-# tabs
+# @t7/tabs
 
 Create tabs and related panel content from a single formatted structure
+
+## Installation
+```js
+npm install @t7/tabs --save-dev
+```
 
 ## Usage
 ```js
