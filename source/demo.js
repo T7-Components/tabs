@@ -20,6 +20,20 @@ class Demo extends React.Component {
     // Expose UI.
     return (
       <div className='App'>
+        <h1>@t7/render</h1>
+
+        <p>
+          <a href='https://github.com/t7-components/tabs/blob/master/source/demo.js'>
+            View "demo.js" on GitHub
+          </a>
+        </p>
+
+        <hr />
+
+        <h2>
+          Tabs rendered using &#60;Tabs&#62; as a container and &#60;TabPanel&#62; for content
+        </h2>
+
         <Tabs selected={0} handleClick={this.handleClick}>
           <TabPanel label='Tab 1'>
             <p>
