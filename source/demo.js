@@ -20,7 +20,7 @@ class Demo extends React.Component {
     // Expose UI.
     return (
       <div className='App'>
-        <h1>@t7/render</h1>
+        <h1>@t7/tabs</h1>
 
         <p>
           <a href='https://github.com/t7-components/tabs/blob/master/source/demo.js'>
