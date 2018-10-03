@@ -4,7 +4,7 @@ Create tabs and related panel content from a single formatted structure
 
 ## Installation
 ```js
-npm install @t7/tabs --save-dev
+npm install @t7/tabs --save
 ```
 
 ## Usage
@@ -51,8 +51,8 @@ const handleClick = (e, index, label) => {
 &nbsp;
 
 ### Note regarding the use of the _required_ CSS
-_*if your build process will not resolve the CSS in a module copy the file `@t7/tabs/dist/index.css` from the node_modules folder and reference the copy with an HTML link *_  
-  
+_*if your build process will not resolve the CSS in a module copy the file `@t7/tabs/dist/index.css` from the node_modules folder and reference the copy with an HTML link *_
+
 ```html
 e.g.
 <link rel="stylesheet" type="text/css" href="<your stylesheet folder>/@t7/tabs/dist/index.css">
