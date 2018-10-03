@@ -60,4 +60,4 @@ e.g.
 
 Demo page:
 
-https://t7-components.github.io/tabs/build/index.html
+https://t7-components.github.io/tabs/build
