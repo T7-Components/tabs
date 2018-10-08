@@ -1,6 +1,6 @@
 # @t7/tabs
 
-Create tabs and related panel content from a single formatted structure
+Create a React tab compoent and related panel content from a single formatted structure
 
 ## Installation
 ```sh
